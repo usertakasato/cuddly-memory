@@ -1,0 +1,125 @@
+:root{
+  --bg:#f8f2ff;
+  --card-back:#ffd6e7;
+  --accent:#6f3fbf;
+  --muted:#6b6b6b;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#fff);
+  color:#222;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.container{
+  width:100%;
+  max-width:760px;
+  background:rgba(255,255,255,0.9);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 8px 30px rgba(100,70,120,0.12);
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+h1{
+  margin:0;
+  color:var(--accent);
+  font-size:1.4rem;
+}
+
+.stats{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.controls button{
+  background:var(--accent);
+  color:white;
+  border:0;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.board{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  padding:6px;
+}
+
+.card{
+  perspective:900px;
+  width:100%;
+  aspect-ratio: 3/4;
+  cursor:pointer;
+  position:relative;
+}
+
+.card-inner{
+  position:absolute;
+  inset:0;
+  transition:transform .45s;
+  transform-style:preserve-3d;
+}
+
+.card.flipped .card-inner{
+  transform:rotateY(180deg);
+}
+
+.card-face{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  backface-visibility:hidden;
+  font-size:2rem;
+  box-shadow:0 6px 14px rgba(0,0,0,0.08);
+}
+
+.card-front{
+  background:linear-gradient(180deg,#fff,#fff);
+  border:2px solid #fff;
+  transform:rotateY(180deg);
+  font-size:2.2rem;
+}
+
+.card-back{
+  background:linear-gradient(180deg,var(--card-back),#ffdbe9);
+  border:2px dashed rgba(111,63,191,0.12);
+  color:var(--accent);
+  font-size:1.6rem;
+}
+
+.footer{
+  margin-top:14px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* Responsive */
+@media (max-width:520px){
+  .board{grid-template-columns:repeat(4,1fr); gap:8px}
+  .card-face{font-size:1.6rem}
+}
