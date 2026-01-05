@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cuddly Memory</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="top">
+      <h1>Cuddly Memory</h1>
+      <div class="stats">
+        <div>Hamleler: <span id="moves">0</span></div>
+        <div>Eşleşmeler: <span id="matches">0</span>/8</div>
+        <div>Süre: <span id="timer">00:00</span></div>
+      </div>
+      <div class="controls">
+        <button id="restart">Yeniden Başlat</button>
+      </div>
+    </header>
+
+    <section id="board" class="board" aria-live="polite"></section>
+
+    <footer class="footer">
+      <small>Sevimli temalı emoji kartlarıyla eşleştir — iyi eğlenceler!</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
