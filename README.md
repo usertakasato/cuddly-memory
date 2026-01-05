@@ -20,5 +20,3 @@ Geliştirmek isterseniz (öneriler)
 - Skor tablosu (localStorage ile)
 - Görsel kartlar yerine dışarıdan resim yükleme
 - Animasyon/puanlama sistemi
-
-İsterseniz bu dosyaları doğrudan GitHub reposuna push etmeye de yardımcı olurum. Onay verirseniz repo'ya ekleyebilirim.
